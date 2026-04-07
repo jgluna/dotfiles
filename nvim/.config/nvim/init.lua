@@ -26,9 +26,5 @@ vim.o.scrolloff = 10
 require("config.lazy")
 require("config.keymaps")
 
-require("catppuccin").setup({
-transparent_background=true
-})
-vim.cmd.colorscheme "catppuccin"
 require("config.lsp")
 require("config.autocmd")

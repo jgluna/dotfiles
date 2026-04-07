@@ -21,8 +21,6 @@ return {
 				-- Formatters
 				"black",
 				"prettier",
-				"sql-formatter",
-				"sqlfmt",
 			},
 		},
 	},
