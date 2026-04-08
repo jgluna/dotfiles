@@ -232,5 +232,6 @@ bar swaybar_command waybar
 # }
 exec foot --server
 exec ~/.cargo/bin/swayrd
+exec xremap ~/.config/xremap/config.yml
 
 include /etc/sway/config.d/*

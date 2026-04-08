@@ -1,0 +1,7 @@
+keymap:
+  - name: Non-terminal super copy/paste
+    application:
+      not: ghostty
+    remap:
+      super-c: ctrl-c
+      super-v: ctrl-v

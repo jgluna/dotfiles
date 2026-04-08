@@ -16,3 +16,5 @@ mouse-scroll-multiplier = 0.95
 keybind = ctrl+shift+d=new_split:down
 keybind = ctrl+d=new_split:right
 keybind = shift+enter=text:\x1b\r
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
