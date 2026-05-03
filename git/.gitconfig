@@ -1,0 +1,22 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Juan Luna
+	email = jgluna85@gmail.com
+[alias]
+  aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ \t => \\2/' | sort
+  commit = commit -s
+  s = status
+  ca = !git add -A && git commit
+  c = commit -m
+  aa = add -A
+  co = checkout
+  nuke = clean -f -d
+  branches = branch --sort=-authordate
+  stashes = stash list
+  remotes = remote -v
+  unstage = reset -q HEAD --
+  uncommit = reset --mixed HEAD~
+  
+  ; Delete local branches that no longer exist on the remote
+  gone = !git fetch -p && git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D
