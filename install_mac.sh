@@ -44,3 +44,5 @@ brew install --cask alt-tab
 brew install --cask slack
 brew install --cask beekeeper-studio
 brew install --cask obsidian
+brew install --cask keycastr
+brew install lazygit
