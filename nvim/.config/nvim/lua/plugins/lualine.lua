@@ -59,24 +59,24 @@ local diff = {
 }
 
 return {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'catppuccin/nvim' },
-    opts ={
-  options = {
-    theme = "catppuccin",
-    globalstatus = true,
-    section_separators = "",
-    component_separators = "",
-    disabled_filetypes = { "mason", "lazy", "NvimTree" },
-  },
-  sections = {
-    lualine_a = { "mode" },
-    lualine_b = { macro_recording },
-    lualine_c = { "filename", lsp_status},
-    lualine_x = { diff, diagnostics, filetype },
-    lualine_y = {},
-    lualine_z = {"location","searchcount"},
-  },
+  'nvim-lualine/lualine.nvim',
+  dependencies = { 'catppuccin/nvim' },
+  opts = {
+    options = {
+      theme = "auto",
+      globalstatus = true,
+      section_separators = "",
+      component_separators = "",
+      disabled_filetypes = { "mason", "lazy" },
+    },
+    sections = {
+      lualine_a = { "mode" },
+      lualine_b = { macro_recording },
+      lualine_c = { "filename", lsp_status },
+      lualine_x = { diff, diagnostics, filetype },
+      lualine_y = {},
+      lualine_z = { "location", "searchcount" },
+    },
 
-    }
+  }
 }

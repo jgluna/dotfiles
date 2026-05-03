@@ -19,6 +19,7 @@ vim.opt.cursorline = true
 vim.opt.completeopt = { "menuone", "noselect", "popup", "preview" }
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_matchit = 1
 vim.lsp.log.set_level(vim.log.levels.WARN)
 vim.o.termguicolors = true
 vim.o.scrolloff = 10

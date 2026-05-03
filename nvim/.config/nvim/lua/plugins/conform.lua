@@ -7,11 +7,6 @@ return{
 		},
 		formatters_by_ft = {
 			python = { "black" },
-			json = { lsp_format = "fallback" },
-			lua = { lsp_format = "fallback" },
-			go = { lsp_format = "fallback" },
-			typescript = { lsp_format = "fallback" },
-			javascript = { lsp_format = "fallback" },
 			javascriptreact = { "prettier" },
 			typescriptreact = { "prettier" },
 			css = { "prettier" },

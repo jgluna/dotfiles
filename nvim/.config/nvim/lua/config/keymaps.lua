@@ -37,3 +37,25 @@ vim.keymap.set('n', '<Esc>', function()
 end, { desc = 'Close floating windows' })
 vim.keymap.set('n', '<Esc><Esc>', ':nohlsearch<CR>', { silent = true })
 
+local function open_term(direction)
+  local dir
+  if vim.bo.filetype == 'oil' then
+    dir = require('oil').get_current_dir()
+  else
+    dir = vim.fn.expand('%:p:h')
+  end
+  if direction == 'v' then
+    vim.cmd('rightbelow vsplit')
+  else
+    vim.cmd('belowright split')
+    vim.cmd('resize 15')
+  end
+  vim.cmd('lcd ' .. vim.fn.fnameescape(dir))
+  vim.cmd('terminal')
+  vim.cmd('startinsert')
+end
+
+vim.keymap.set('n', '<leader>tv', function() open_term('v') end, { desc = 'Terminal vertical split' })
+vim.keymap.set('n', '<leader>th', function() open_term('h') end, { desc = 'Terminal horizontal split' })
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n><C-w>q')
+
