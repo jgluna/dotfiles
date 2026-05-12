@@ -13,8 +13,7 @@ custom-shader = ./shaders/cursor_blaze_tapered.glsl
 # Slowdown mouse scrolling
 mouse-scroll-multiplier = 0.95
 
-keybind = ctrl+shift+d=new_split:down
-keybind = ctrl+d=new_split:right
+keybind = super+s>s=goto_split:next
 keybind = shift+enter=text:\x1b\r
 keybind = super+c=copy_to_clipboard
 keybind = super+v=paste_from_clipboard
